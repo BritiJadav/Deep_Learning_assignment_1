@@ -19,3 +19,14 @@ Impact of Visual Similarity on Model Performance
 4.	Effect on Confusion Matrix - Most errors will occur between visually similar classes. Confusion matrix will show strong off-diagonal values for those pairs.
 
  https://wandb.ai/ma24m006-indian-institute-of-technology-madras/ASSIGNMENT_1/runs/715gue7v
+
+ Q. 3 Compare the convergence rates of all 4 optimizers using the same architecture (3 hidden layers, 128 neurons each, ReLU activation). Which optimizer minimized the loss fastest in the first 5 epochs? Theoretically, why does RMSProp often outperform standard SGD on image classification?
+ 
+Ans : RMSProp optimizer minimize the loss fastest in the first 5 epochs.
+
+Image datasets like MNIST:
+•	High dimensional (784 inputs)
+•	Deep networks
+•	Many parameters
+•	Sparse gradients in ReLU
+•	Noisy gradients
