@@ -42,3 +42,13 @@ Q. 4 Fix the optimizer to RMSProp and compare Sigmoid and ReLU for different net
 
 Ans : Using RMSProp optimizer, we compared Sigmoid and ReLU activations across different network configurations. The plot of gradient norm versus epoch showed that the gradients in the Sigmoid network rapidly decreased towards zero, indicating the presence of the vanishing gradient problem. In contrast, the ReLU network maintained significantly larger gradient norms across epochs.
 
+Q. 6 Compare the training curves of two models: one using Mean Squared Error (MSE)  and one using Cross-Entropy. Use the same architecture and learning rate for both. Which loss function converged faster? Theoretically, why is Cross-Entropy better suited for multi-class classification when paired with a Softmax output ?
+
+Ans : By looking at the graph we conclude that Cross - Entropy loss function converge faster. 
+
+Cross-Entropy converged significantly faster than MSE under identical architecture and learning rate. This is because Cross-Entropy combined with Softmax produces a simplified gradient (y_pred − y_true), resulting in stronger and more stable updates. In contrast, MSE introduces additional gradient shrinkage due to the Softmax derivative, slowing down convergence.
+
+1. It directly maximizes log-likelihood.
+2. It penalizes confident wrong predictions heavily.
+3. Produces stronger gradients when predictions are incorrect.
+
