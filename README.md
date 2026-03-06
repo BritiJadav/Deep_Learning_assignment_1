@@ -1,4 +1,7 @@
 # Deep_Learning_assignment_1
+[Wandb Report Link](https://wandb.ai/ma24m006-indian-institute-of-technology-madras/ASSIGNMENT_1/reports/-DA6401_Assignment_1--VmlldzoxNjExNzI4OA?accessToken=4gq97o3kmtw99i0r43c40d5oe2vv1lt0xpksovqrr2q68threualbyrsbkv1v1ye)
+
+
 Q. 1 Log a W&B Table containing 5 sample images from each of the 10 classes in the dataset. Identify any classes that look visually similar in their raw form. How might this visual similarity impact your model? 
 
 Ans : Though MNIST digits are distinct, some digits looks similar due to handwriting variations.
