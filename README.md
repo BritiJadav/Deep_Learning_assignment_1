@@ -42,6 +42,12 @@ Q. 4 Fix the optimizer to RMSProp and compare Sigmoid and ReLU for different net
 
 Ans : Using RMSProp optimizer, we compared Sigmoid and ReLU activations across different network configurations. The plot of gradient norm versus epoch showed that the gradients in the Sigmoid network rapidly decreased towards zero, indicating the presence of the vanishing gradient problem. In contrast, the ReLU network maintained significantly larger gradient norms across epochs.
 
+Q. 5 Using ReLU activation and a high learning rate (e.g., 0.1), monitor the activations of your hidden layers. Find a run where the validation accuracy plateaus early. Look at the distribution of your activations. Can you identify ”dead neurons” (neurons that output zero for all inputs)? Compare this run with a Tanh run and explain the difference in convergence based on the gradients you observed.
+
+Ans : Using ReLU with a high learning rate (0.1), the validation accuracy plateaued early. Analysis of hidden layer activations showed a large fraction of neurons outputting zero across all inputs, indicating dead neurons. This occurs because ReLU produces zero gradients for negative inputs, and a large learning rate can push neurons permanently into the negative region.
+
+In contrast, Tanh activation did not produce dead neurons. Although gradients became small in saturated regions, they were not exactly zero, allowing continued learning. Therefore, ReLU is more sensitive to high learning rates, while Tanh maintains gradient flow but may suffer from vanishing gradients instead.
+
 Q. 6 Compare the training curves of two models: one using Mean Squared Error (MSE)  and one using Cross-Entropy. Use the same architecture and learning rate for both. Which loss function converged faster? Theoretically, why is Cross-Entropy better suited for multi-class classification when paired with a Softmax output ?
 
 Ans : By looking at the graph we conclude that Cross - Entropy loss function converge faster. 
