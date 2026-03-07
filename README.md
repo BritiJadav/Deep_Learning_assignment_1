@@ -7,20 +7,14 @@ The skeleton of the assignment looks like :
 src/
 │     ---ann/
             ├── dakshina_dataset_v1.0.zip             
-            │── vocab_input.json                        
-            ├── vocab_output.json                      
-            |── dakshina_dataset_v1.0/hi/lexicons/    
-│
-├── font/
-│   ├── NotoSansDevanagari-VariableFont_wdth,wght.ttf
-|
-├── models/                                     # Model architectures
-│   ├── encoder.py                              # Encoder for vanilla model
-│   ├── decoder.py                              # Decoder for vanilla model
-│   ├── seq2seq.py                              # Seq2seq class integrating encoder and decoder
-│   ├── attention.py                            # Attention mechanism
-│   ├── attention_encoder.py                    # Encoder for attention model
-│   ├── attention_decoder.py                    # Decoder for attention model
-│   └── attention_seq2seq.py
+            │── activations.py                     
+            ├── neural_layer.py                    
+            |── neural_network.py
+            |-- objective_functions.py
+            |-- optimizers.py 
+       ---utils/
+            ├── data_loader.py
+       --- inference.py
+       --- train.py
 
 ```
