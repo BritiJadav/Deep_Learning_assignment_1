@@ -4,9 +4,9 @@ import json
 
 from sklearn.metrics import f1_score, precision_score, recall_score
 
-from src.utils.data_loader import load_data
-from src.ann.neural_network import NeuralNetwork
-from src.ann.objective_functions import cross_entropy
+from utils.data_loader import load_data
+from ann.neural_network import NeuralNetwork
+from ann.objective_functions import cross_entropy
 
 
 def load_model(model_path):
