@@ -1,5 +1,5 @@
 import numpy as np
-from neural_layer import NeuralLayer
+from .neural_layer import NeuralLayer
 
 class NeuralNetwork:
     def __init__(self, config):
