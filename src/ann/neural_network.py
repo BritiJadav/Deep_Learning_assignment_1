@@ -32,10 +32,8 @@ class NeuralNetwork:
         return h
 
     def backward(self, y_true, y_pred):
-        # Gradient of cross-entropy + softmax
         grad_a = (y_pred - y_true) / y_true.shape[0]
 
-        # Backprop through layers (reverse order)
         for layer in reversed(self.layers):
             grad_a = layer.backward(grad_a)
 
